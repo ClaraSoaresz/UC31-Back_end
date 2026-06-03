@@ -2,9 +2,22 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/inscricao', methods=['GET', 'POST'])
-def inscricao():
-    mensagem = ""
+@app.route('/')
+def formulario():
+    return render_template('index.html')
 
-    if request.method == 'POST':
-        nickname = request.form.get
+@app.route('/validacao', methods=['POST'])
+def cadastro():
+
+    nome = request.form.get('nome', '').strip().tittle()
+    email = request.form.get('email', '').strip().tittle()
+    cidade = request.form.get('cidade', '').strip().tittle()
+
+    return f"""
+    Nome: {nome}<br>
+    Email: {email}<br>
+    Cidade: {cidade}<br>
+    """
+
+if __name__ == '__main__':
+    app.run(debug=True)
