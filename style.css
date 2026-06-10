@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.claro {
+    background-color: white;
+    color: black;
+}
+
+.escuro {
+    background-color: #222;
+    color: white;
+}

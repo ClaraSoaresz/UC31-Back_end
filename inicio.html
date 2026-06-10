@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Troca de Tema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="{{ tema }}">
+
+    <h1>Troca de Tema</h1>
+
+    <p>Tema atual: {{ tema }}</p>
+
+    <a href="/tema/claro">
+        <button>Modo Claro</button>
+    </a>
+
+    <a href="/tema/escuro">
+        <button>Modo Escuro</button>
+    </a>
+
+</body>
+</html>
